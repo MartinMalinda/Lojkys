@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../myFirstWebsite/assets/topography.png");
+}
+
+nav {
+    position: relative;
+    text-align: right;
+    background: #333333;
+    margin: 0 auto;
+}
+
+.left-side {
+    float: left;
+    margin: 10px 10px 10px 10%;
+}
+
+.left-side img {
+    animation: rotation 4s linear infinite;
+}
+
+.right-side li {
+    display: inline-block;
+    padding: 17px;
+}
+
+.right-side .indentation {
+    margin-right: 10%;
+}
+
+.right-side li a {
+    font-family: courier;
+    color: #ff0099;  
+    text-decoration: none;  
+}
+
+.right-side li a:hover {
+    color: blue;
+}
+
+.right-side li:hover {
+    background: white;
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.all {
+    margin: 0 10%;
+    font-family: courier;
+}
+
+.pink {
+    color: #ff0099;
+}
+
+h1 {
+    margin-top: 80px;
+    padding-bottom: 25px;
+}
+
+.dots {
+    text-align: center;
+    margin: 60px 0; 
+}
+
+.bottom h2 {
+    text-align: center;
+    padding-bottom: 1cm;
+    font-weight: 900;
+}
+ 
+p {
+    margin: 18px 0;
+    font-weight: 500;
+}
+
+.bottom p {
+    font-size: 14px;
+}
+
+.middle p{
+    font-size: 18px;
+}
+
+.center img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer {
+    position: relative;
+    text-align: right;
+    background: #333333;
+    margin: 0 auto;
+}
+
+.footer p {
+    color: white;
+    margin: 0 10% 0 0;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
