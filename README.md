@@ -6,6 +6,6 @@
 
 [Patchwork](https://github.com/Lojkys/patchwork)
 
-[Syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
+[My Class Syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
 
 [Github Usage](https://github.com/green-fox-academy/definitions/blob/master/general/github-usage.md)
