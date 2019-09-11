@@ -6,7 +6,7 @@
 
 [Patchwork](https://github.com/Lojkys/patchwork)
 
-#Stage #Commit #Push
+<h3>Syllabus<h3>
 [Syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
 
 [Github Usage](https://github.com/green-fox-academy/definitions/blob/master/general/github-usage.md)
