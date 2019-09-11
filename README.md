@@ -6,6 +6,10 @@
 
 [Patchwork](https://github.com/Lojkys/patchwork)
 
+[My First Website](https://github.com/Lojkys/lojkys.github.io)
+
 [My Class Syllabus](https://github.com/green-fox-academy/chama-retros-syllabus)
 
 [Github Usage](https://github.com/green-fox-academy/definitions/blob/master/general/github-usage.md)
+
+
