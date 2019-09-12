@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +12,12 @@ namespace Workshops_Tasks
         {
             // Write a program that asks for a double that is a distance in miles,
             // then it converts that value to kilometers and prints it
-            while (true)
-            {
-                Console.WriteLine("What is the distance in miles?");
-                double distanceInMiles = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("And your distance in kilometers is " + distanceInMiles * 1.609344 + " km");
 
-                Console.ReadLine();
-            }
+            Console.WriteLine("What is the distance in miles?");
+            double distanceInMiles = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("And your distance in kilometers is "+ distanceInMiles * 1.609344 + " km");
+
+            Console.ReadLine();
 
         }
     }
