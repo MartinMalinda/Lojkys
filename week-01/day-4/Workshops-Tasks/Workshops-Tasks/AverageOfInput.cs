@@ -19,16 +19,19 @@ namespace GreenFox
             int Fifthumber;
 
             Console.WriteLine("Write 5 numbers");
-            FirstNumber = Convert.ToInt32(Console.ReadLine());
-            SecondNumber = Convert.ToInt32(Console.ReadLine());
-            ThirdNumber = Convert.ToInt32(Console.ReadLine());
-            FourthNumber = Convert.ToInt32(Console.ReadLine());
-            Fifthumber = Convert.ToInt32(Console.ReadLine());
+            FirstNumber = Convert.ToInt32(Console.Read());
+            SecondNumber = Convert.ToInt32(Console.Read());
+            ThirdNumber = Convert.ToInt32(Console.Read());
+            FourthNumber = Convert.ToInt32(Console.Read());
+            Fifthumber = Convert.ToInt32(Console.Read());
 
             Console.WriteLine("Your numbers are: {0} {1} {2} {3} {4}", FirstNumber, SecondNumber, ThirdNumber, FourthNumber, Fifthumber);
             Console.WriteLine("And the average is: " + (FirstNumber + SecondNumber + ThirdNumber + FourthNumber + Fifthumber) / 5.0);
 
             Console.ReadLine();
+            Console.ReadLine();
+
+			
 
 
         }
