@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace GreenFox
 {
@@ -11,11 +11,7 @@ namespace GreenFox
             string myString = string.Format("Phone number: {0:+ 420 ### ### ###}", phoneNumber); 
 
             Console.WriteLine(myString);
-
-            Console.WriteLine(myString.Substring(6, 6));
-
-            Console.WriteLine(myString.Length());
-            Console.ReadLine();  
+            Console.ReadLine();
         }
     }
 }

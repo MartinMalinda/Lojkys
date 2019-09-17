@@ -14,6 +14,8 @@ namespace GreenFox
             int[] aj = { 3, 4, 5, 6, 7 };
             int[] abc = new int[5];
 
+            Array.Reverse(aj);
+
             for (int i = 0; i < aj.Length; i++)
             {
                 abc[i] = aj[((aj.Length) - 1) - i];
