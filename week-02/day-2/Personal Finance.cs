@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,8 +25,7 @@ namespace GreenFox
             Console.WriteLine("Our greatest expense was: "+ max);
             int min = expenses.Min();
             Console.WriteLine();
-            double average = 0.0;
-            average = expenses.Average();
+            double average = expenses.Average();
             Console.WriteLine("This was average expenses: " + average);
             Console.ReadLine();
 
