@@ -17,7 +17,6 @@ namespace GreenFox
             {
                 Console.WriteLine("{0} "+ "(ISBN: {1} ", kvp.Value, kvp.Key);
             }
-
             
             Console.WriteLine("------------------");
             PhoneMap.Remove("978-1-60309-444-3");

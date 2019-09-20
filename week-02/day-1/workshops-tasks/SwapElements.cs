@@ -12,6 +12,8 @@ namespace GreenFox
 
             string[] abc = { "first", "second", "third" };
 
+            (a, b) = (b, a)
+
             string temp;
             temp = abc[0];
             abc[0] = abc[2];

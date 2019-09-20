@@ -28,13 +28,10 @@ namespace DrawingApplication
         private static void AppMain(Application app, string[] args)
         {
             app.Run(new MainWindow());
-        
+
             var foxDraw = new FoxDraw(canvas);
-            
-
-
         }
 
-       
+
     }
 }

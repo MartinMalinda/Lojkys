@@ -33,35 +33,37 @@ namespace DrawingApplication
             Lines(foxDraw);
 
         }
-        public static void Lines (FoxDraw foxDraw)
+        public static void Lines(FoxDraw foxDraw)
         {
             List<Point> StartPoints = new List<Point>();
-            StartPoints.Add(new Point(10, 10));         
+            StartPoints.Add(new Point(10, 10));
             StartPoints.Add(new Point(290, 290));
 
             List<Point> EndPoints = new List<Point>();
             EndPoints.Add(new Point(10, 290));
             EndPoints.Add(new Point(290, 10));
-            
+
 
             List<Point> StartPoints2 = new List<Point>();
             StartPoints2.Add(new Point(50, 100));
+            StartPoints2.Add(new Point(70, 70));
             StartPoints2.Add(new Point(80, 90));
+            StartPoints2.Add(new Point(90, 90));
             StartPoints2.Add(new Point(100, 70));
+            StartPoints2.Add(new Point(120, 100));
             StartPoints2.Add(new Point(85, 130));
-
-            List<Point> EndPoints2 = new List<Point>();
-            EndPoints2.Add(new Point(70, 70));
-            EndPoints2.Add(new Point(90, 90));
-            EndPoints2.Add(new Point(120, 100));          
-            EndPoints2.Add(new Point(50, 100));
+            StartPoints2.Add(new Point(50, 100)); // 7 
+            
 
             foxDraw.SetStrokeColor(Colors.Green);
             foxDraw.SetStrokeThicknes(2);
             for (int i = 0; i < StartPoints2.Count; i++)
             {
-                Console.WriteLine(i);
-                foxDraw.DrawLine(StartPoints2[i], EndPoints2[i]);
+                foxDraw.DrawLine(StartPoints2[i], StartPoints2[i + 1]);
+                if (i == 6)
+                {
+                    break;
+                }
             }
 
             foreach (var start in StartPoints)

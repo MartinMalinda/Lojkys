@@ -14,6 +14,13 @@ namespace GreenFox
             int[] s = { 1, 2, 3, 8, 5, 6 };
             s[3] = 4;
 
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == 8)
+                {
+                    s[i] = 4;
+                }
+            }
             Console.WriteLine(s[3]);
 
             Console.ReadLine();

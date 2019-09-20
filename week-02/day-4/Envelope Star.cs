@@ -23,6 +23,8 @@ namespace DrawingApplication
             double canvasHeight = canvas.Height = 600;
             double canvasWidth = canvas.Width = 600;
 
+            foxDraw.SetBackgroundColor(Colors.Black);
+            foxDraw.SetStrokeColor(Colors.Pink);
             Lines(foxDraw);
 
         }
@@ -30,38 +32,32 @@ namespace DrawingApplication
         {
             int y = 0;
             int x = 300;
+            int a = 300;
+            int b = 600;
+            int c = 300;
+            int d = 600;
+            int e = 20;
+            int f = 280;
             for (int i = 0; i < 15; i++)
             {
                 foxDraw.DrawLine(300, y, x, 300);
                 y += 20;
                 x += 20;
-            }
-            int a = 300;
-            int b = 600;
-            for (int i = 0; i < 15; i++)
-            {
+            
                 foxDraw.DrawLine(300, b, a, 300);
                 a += 20;
                 b -= 20;
-            }
-            int c = 300;
-            int d = 600;
-            for (int i = 0; i < 15; i++)
-            {
-                foxDraw.DrawLine(300, d, c, 300);
+            
+                foxDraw.DrawLine(300, d, c, 300)
                 d -= 20;
                 c -= 20;
-            }
-            int e = 20;
-            int f = 280;
-            for (int i = 0; i < 15; i++)
-            {
+           
                 foxDraw.DrawLine(e, 300, 300, f);
                 e += 20;
                 f -= 20;
             }
         }
-        private void InitializeComponent() 
+        private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
         }
