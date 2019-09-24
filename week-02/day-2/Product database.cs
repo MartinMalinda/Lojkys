@@ -37,7 +37,8 @@ namespace GreenFox
                 Console.WriteLine(key);
 
             Console.Write("The Average price is: ");
-            Console.WriteLine(ProductsAndPrices.Values.Average());
+            double average = ProductsAndPrices.Values.Average();
+            Console.WriteLine(Math.Round(average));
             Console.Write("Can we buy something for 125? ");
             Console.WriteLine(ProductsAndPrices.Values.Contains(125));
             Console.Write("What is the cheapest product? ");

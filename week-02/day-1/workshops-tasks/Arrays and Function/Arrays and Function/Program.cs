@@ -10,36 +10,19 @@ namespace Arrays_and_Function
     {
         static void Main(string[] args)
         {
-            // - Create (dynamically) a two dimensional array
-            //   with the following matrix. Use a loop!
-            //
-            //   1 0 0 0
-            //   0 1 0 0
-            //   0 0 1 0
-            //   0 0 0 1
-            //
-            // - Print this two dimensional array to the output
+            Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+            phoneBook.Add("William A. Lathan", "405 - 709 - 1865");
+            phoneBook.Add("John K. Miller", "402 - 247 - 8568");
+            phoneBook.Add("Hortensia E. Foster", "606 - 481 - 6467");
+            phoneBook.Add("Amanda D. Newland", "319 - 243 - 5613");
+            phoneBook.Add("Brooke P. Askew", "307 - 687 - 2982");
 
-            int[,] matrix = new int [4, 4];
+            Console.WriteLine(phoneBook["John K. Miller"]);
 
-            int lower = matrix.GetLowerBound(0);
-            int upper = matrix.GetUpperBound(0);
-
-            for (int i = lower; i < upper; i++)
-            {
-                matrix[i, i] = 1;
-            }
-            for (int i = 0; i <= upper; i++)
-            {
-                for (int j = 0; j <= upper; j++)
-                {
-                    Console.Write(matrix[i,j]);
-                }
-                Console.WriteLine();
-            }
-           
+            Console.WriteLine(phoneBook.ContainsKey("Chris E. Myers"));
 
             Console.ReadLine();
+
         }
     }
 }
