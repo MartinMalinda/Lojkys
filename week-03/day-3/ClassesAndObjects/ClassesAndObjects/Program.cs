@@ -10,38 +10,42 @@ namespace ClassesAndObjects
     {
         static void Main(string[] args)
         {
-            List<Pokemon> pokemonOfAsh = InitializePokemon();
+            var fleet = new Fleet();
+            // - You have the `Thing` class
+            // - You have the `Fleet` class
+            // - You have the `FleetOfThings` class with a `Main` method
+            // - Download those, use those
+            // - In the Main method create a fleet
+            // - Achieve this output:s
+            // Create a fleet of things to have this output:
+            // 1. [ ] Get milk
+            // 2. [ ] Remove the obstacles
+            // 3. [x] Stand up
+            // 4. [x] Eat lunch
+            // Hint: You have to create a Print method also
+            fleet.Add(new Thing("Get milk"));
+            fleet.Add(new Thing("Remove the obstacles"));
+            fleet.Add(new Thing("Stand up"));
+            fleet.Add(new Thing("Eat lunch"));
 
-            // Every pokemon has a name and a type.
-            // Certain types are effective against others, e.g. water is effective against fire.
+            fleet.GetThings()[2].Complete();
+            fleet.GetThings()[3].Complete();
 
-            // Ash has a few pokemon.
-            // A wild pokemon appeared!
 
-            Pokemon wildPokemon = new Pokemon("Oddish", PokemonType.Leaf, PokemonType.Water);
-            Pokemon wildPokemon2 = new Pokemon("Star", PokemonType.Electric, PokemonType.Water);
-
-            // Which pokemon should Ash use?
-            for (int i = 0; i < pokemonOfAsh.Count; i++)
+            for (int i = 0; i < fleet.GetThings().Count; i++)
             {
-                if (InitializePokemon()[i].IsEffectiveAgainst(wildPokemon) == true)
+                if (fleet.GetThings()[i].GetBoolStatus() == true)
                 {
-                    Console.WriteLine($"I choose you, {InitializePokemon()[i].Name} ");
-                }             
+                    Console.WriteLine($"{i + 1}. [x] {fleet.GetThings()[i].GetName()}");
+                }
+                else
+                {
+                    Console.WriteLine($"{i + 1}. [ ] {fleet.GetThings()[i].GetName()}");
+                }
+                
             }
-          Console.ReadLine();
-        }
 
-        private static List<Pokemon> InitializePokemon()
-        {
-            return new List<Pokemon>
-            {
-                new Pokemon("Balbasaur", PokemonType.Leaf, PokemonType.Water),
-                new Pokemon("Pikatchu", PokemonType.Electric, PokemonType.Water),
-                new Pokemon("Charizard", PokemonType.Fire, PokemonType.Leaf),
-                new Pokemon("Balbasaur", PokemonType.Water, PokemonType.Fire),
-                new Pokemon("Kingler", PokemonType.Water, PokemonType.Fire)
-            };
+            Console.ReadLine();
         }
     }
 }
