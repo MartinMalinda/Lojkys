@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace CloneAble
         {
 
         }
-        public Sponsor(string name, int age, string gender, string company):base(name,age,gender)
+        public Sponsor(string name, int age, string gender, string company) : base(name, age, gender)
         {
 
         }

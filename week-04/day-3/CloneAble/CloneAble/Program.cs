@@ -11,29 +11,6 @@ namespace CloneAble
     {
         static void Main(string[] args)
         {
-
-            //Person personLukas = new Person("Lukas", 23, "Male");
-            //personLukas.Introduce();
-            //personLukas.GetGoal();
-            //Console.WriteLine();
-
-            //Student studentPedro = new Student("Pedro",52,"Male","Kelly Walsh High School");          
-            //studentPedro.SkipDays(3);
-            //studentPedro.Introduce();
-            //Console.WriteLine();
-
-            //Mentor esy = new Mentor("Esy", 30, "Male", Mentor.Level.senior);
-            //esy.Introduce();
-            //Console.WriteLine();
-
-            //Sponsor microsoft = new Sponsor("Bill Gates", 80, "Male", "Microsoft");
-            //microsoft.Introduce();
-            //microsoft.Hire();
-            //microsoft.Hire();
-
-
-            //Console.ReadLine();
-
             var people = new List<Person>();
 
             var mark = new Person("Mark", 46, "male");
@@ -77,6 +54,10 @@ namespace CloneAble
             awesome.AddMentor(mentor);
             awesome.AddMentor(gandhi);
             awesome.Info();
+
+            Student johnTheclone = john.Clone() as Student;
+            Console.WriteLine();
+            Console.WriteLine(johnTheclone.Name + " " + johnTheclone.Age);
 
             Console.ReadLine();
         }

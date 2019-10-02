@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace CloneAble
         {
 
         }
-        public Mentor(string name, int age, string gender, Level level):base(name, age, gender)
+        public Mentor(string name, int age, string gender, Level level) : base(name, age, gender)
         {
             TypeOfLevel = level;
         }

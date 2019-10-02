@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CloneAble
 {
-    class Student : Person
+    class Student : Person, ICloneable
     {
         private string previousOrganization = "The School Of Life";
         private int skippedDays = 0;
@@ -18,6 +18,11 @@ namespace CloneAble
         public Student(string name, int age, string gender, string previousOrganization) : base(name, age, gender)
         {
             this.previousOrganization = previousOrganization;
+        }
+
+        public object Clone()
+        {
+            return this;
         }
 
         public override void GetGoal()
