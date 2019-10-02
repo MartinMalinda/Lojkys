@@ -10,6 +10,15 @@ namespace FlyAble
     {
         static void Main(string[] args)
         {
+            Helicopter vehicle = new Helicopter();
+            vehicle.Name = "Boeing";
+            vehicle.Land();
+            Console.WriteLine(vehicle.Name);
+
+            var vehicle2 = new Helicopter();
+            vehicle2.Fly();
+
+            Console.ReadLine();
         }
     }
 }
