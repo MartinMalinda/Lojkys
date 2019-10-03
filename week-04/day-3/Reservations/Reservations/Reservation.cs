@@ -8,6 +8,15 @@ namespace Reservations
 {
     class Reservation : IReservation
     {
+        private static readonly Random random = new Random();
+        private static readonly object syncLock = new object();
+        public static int RandomNumber(int min, int max)
+        {
+            lock (syncLock)
+            { // synchronize
+                return random.Next(min, max);
+            }
+        }
         public Reservation()
         {
 
@@ -20,20 +29,18 @@ namespace Reservations
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var stringChars = new char[8];
-            var random = new Random();
 
             for (int i = 0; i < stringChars.Length; i++)
             {
-                stringChars[i] = chars[random.Next(chars.Length)];
+                stringChars[i] = chars[RandomNumber(0, chars.Length)];
             }
             var finalString = new String(stringChars);
             return finalString;
-        }   
+        }
         public string GetDowBooking()
         {
             string[] days = { "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" };
-            var random = new Random();         
-            return days[random.Next(days.Length)];          
+            return days[RandomNumber(0, days.Length)];
         }
     }
 }

@@ -9,17 +9,17 @@ namespace Reservations
     class Program
     {
         static void Main(string[] args)
-        {          
+        {
 
-            //List<Reservation> reservations = new List<Reservation>();
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
-            //reservations.Add(new Reservation());
+            List<Reservation> reservations = new List<Reservation>();
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
+            reservations.Add(new Reservation());
             Console.WriteLine();
             Reservation reservation1 = new Reservation();
             Reservation reservation2 = new Reservation();
@@ -32,10 +32,10 @@ namespace Reservations
             reservation4.MyReservation();
             Console.WriteLine();
 
-            //foreach (var reservation in reservations)
-            //{
-            //    reservation.MyReservation();
-            //}
+            foreach (var reservation in reservations)
+            {
+                reservation.MyReservation();
+            }
 
             Console.ReadLine();
         }
