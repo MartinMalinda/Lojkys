@@ -17,6 +17,13 @@ namespace Sum
     {
         private List<int> sumList = new List<int> { 34, 23, 4, 7, 5, 2, 42, 52, 25, 76 };
         public List<int> SumList { get { return sumList; } private set { } }
+        //public List<int> emptyList = new List<int>();
+        //public List<int> oneElementList = new List<int> { 8 };
+
+        public Summ()
+        {
+
+        }
         public int SumTheNumbersInList(List<int> numbers)
         {
             int summary = 0;
