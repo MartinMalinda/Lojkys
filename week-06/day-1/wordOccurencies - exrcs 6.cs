@@ -15,7 +15,9 @@ namespace PracticeLINQ
 
             var result = names.GroupBy(w => w).ToList();
             result.ForEach(w => Console.WriteLine(w.Key + " : " + w.Count()));
+
             Console.WriteLine();
+            
             var result2 = from word in names
                           group word by word into g
                           select g;
