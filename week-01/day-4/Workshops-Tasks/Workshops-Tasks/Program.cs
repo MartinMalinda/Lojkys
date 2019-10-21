@@ -1,36 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Controls;
-using System.IO;
 
-namespace GreenFox
+namespace Workshops_Tasks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string path = @"./Reversing.txt";
-            string[] oldText = File.ReadAllLines(path);
-
-            Reverse(oldText);
-            Console.ReadLine();
-          
-        }
-        public static string Reverse(string[] oldText)
-        {
-           for (int i = 0; i < oldText.Length; i++)
+            var fleet = new Fleet();
+            fleet.Add(new Thing("Get milk"));
+            fleet.Add(new Thing("Remove the obstacles"));
+            fleet.Add(new Thing("Stand up"));
+            fleet.Add(new Thing("Eat lunch"));
+            // - Achieve this output:s
+            // Create a fleet of things to have this output:
+            // 1. [ ] Get milk
+            // 2. [ ] Remove the obstacles
+            // 3. [x] Stand up
+            // 4. [x] Eat lunch
+            // Hint: You have to create a Print method also 
+            foreach (var item in fleet.Things)
             {
-                string characters = "";
-                for (int j = 0; j < oldText[i].Length; j += 2)
-                {
-                    characters += oldText[i][j];
-                    
-                }
-                Console.WriteLine(characters);
-
+                Console.WriteLine(item.Name);
             }
-            return oldText[0];
+            Console.ReadLine();
         }
     }
 }

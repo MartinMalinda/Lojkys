@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Count_Letters
 {
-    class Letters
+    public class Letters
     {
+        public Dictionary<char, int> OriginalDictionary { get; private set; }
         public Letters()
         {
-
+             
         }
         public void CountLetters(string word)
         {
             Dictionary<char, int> outputDictionary = new Dictionary<char, int>();
-            //word.Replace(" ", "");
+            //word.Replace(" ", ""); 
             foreach (var letter in word)
             {
                 if (letter == ' ')
@@ -34,6 +35,7 @@ namespace Count_Letters
             foreach (var item in outputDictionary)
             {
                 Console.WriteLine(item.Key + " " + item.Value + " ");
+                OriginalDictionary = outputDictionary;
             }
         }
     }

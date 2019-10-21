@@ -32,7 +32,6 @@ namespace The_Garden_Application
         {
             for (int i = 0; i < 2; i++)
             {
-                Console.WriteLine("I'm watering");
                 flowers[i].WaterStorage += waterStorage;
             }              
         }
