@@ -14,4 +14,6 @@
 
 [Todo App](https://github.com/Lojkys/todo-app)
 
+[Wanderer Game](https://github.com/Lojkys/wanderer-cs)
+
 
