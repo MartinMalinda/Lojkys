@@ -40,7 +40,7 @@ input:focus {
     border-color: green;
 }
 
-input:invalid {
+input:invalid:focus {
     border-color: red;
 }
 
