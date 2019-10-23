@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    box-shadow: 4px 4px 4px grey;
+}
+
+form {
+    background-color: white;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.inputs, button {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+input {
+    padding: 8px 5px;
+    margin: 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+}
+
+input:focus {
+    border-bottom-color: rgb(75, 163, 115);
+}
+
+button {
+    border: 0;
+    outline: none;
+    color: white;
+    background-color: rgb(75, 163, 115);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.or p {
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px grey;
+    margin: 10px;
+}
+
+.right-side a {
+    text-decoration: none;
+    color: white;
+}
+
+.right-side {
+    margin-top: 80px;
+}
+
+li {
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 10px;
+}
+
+.facebook {
+    background-color: blue;
+    padding: 10px 30px;
+}
+
+.twitter {
+    background-color: lightblue;
+    padding: 10px 30px;
+}
+
+.google {
+    background-color: red;
+    padding: 10px 30px;
+}
