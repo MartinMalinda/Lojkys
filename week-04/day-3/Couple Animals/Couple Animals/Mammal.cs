@@ -13,7 +13,7 @@ namespace Couple_Animals
 
         }
         public Mammal(AnimalType name, int age, GenderType gender)
-        {
+        {               
             this.Name = name;
             this.Age = age;
             this.Gender = gender;
