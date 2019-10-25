@@ -25,6 +25,41 @@ namespace MyShop.Controllers
         {
             ViewBag.Items = listItem;
             return View();
-        }      
+        }    
+        
+        [Route("onlyavailable")]
+        public IActionResult OnlyAvailable()
+        {
+            ViewBag.Items = listItem.Where(l => l.Quantity > 0);
+            return View("Index");
+        }
+
+        [Route("cheapestfirst")]
+        public IActionResult CheapestFirst()
+        {
+            ViewBag.Items = listItem.OrderBy(l => l.Price);
+            return View("Index");
+        }
+
+        [Route("containsnike")]
+        public IActionResult ContainsNike()
+        {
+            ViewBag.Items = listItem.Where(l => l.Description.ToLower().Contains("nike"));
+            return View("Index");
+        }
+
+        [Route("averagestock")]
+        public IActionResult AverageStock()
+        {
+            ViewBag.Items = listItem.Select(l => l.Quantity).Average().ToString();
+            return View("Index");
+        }
+
+        [Route("mostexpensive")]
+        public IActionResult MostExpensive()
+        {
+            ViewBag.Items = listItem.OrderByDescending(l => l.Price).Take(1);
+            return View("Index");
+        }
     }
 }
