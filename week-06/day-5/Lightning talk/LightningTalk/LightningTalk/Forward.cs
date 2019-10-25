@@ -7,22 +7,23 @@ using System.Threading.Tasks;
 namespace LightningTalk
 {
     class Forward : Player
-   {    public override void Jump()
+    {
+        public override void Jump()
         {
-      for (int i = 0; i < 10; i++)
-      {
-  Console.WriteLine("test");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("test");
+            }
         }
-    }
 
-public override void Move()
-      {
- throw new NotImplementedException();
-  }
+        public override void Move()
+        {
+            
+        }
 
-    public override void Shoot()
-   {
-         throw new NotImplementedException();
-     }
+        public override void Shoot()
+        {
+            
+        }
     }
 }

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <link href="~/style.css" rel="stylesheet">
+        <link href="~/main.css" rel="stylesheet">
         <title>My Shop</title>
     </head>
     <body>
@@ -23,7 +23,29 @@
                     <input type="search" id="search" name="search" placeholder="...something like nike" />
                 </div>
                 <button>Search</button>                
-            </div>                     
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Price</td>
+                        <td>Quantity of stock</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.Items)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Price.0 Kč</td>
+                            <td>@item.Quantity</td>
+                        </tr>
+                    }
+                </tbody>
+                
+            </table>
         </main>
     </body>
 </html>
