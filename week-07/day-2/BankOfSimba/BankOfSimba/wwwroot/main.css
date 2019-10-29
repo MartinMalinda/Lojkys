@@ -52,3 +52,7 @@ td {
     border: 1px solid black;
     padding: 15px;
 }
+
+.shiny {
+    color: red;
+}

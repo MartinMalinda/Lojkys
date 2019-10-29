@@ -1,9 +1,12 @@
 ﻿@model List< BankOfSimba.Models.BankAccount>
 
+@{ 
+    var index = 1;
+}
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link href="~/style.css" rel="stylesheet" />
+    <link href="~/main.css" rel="stylesheet" />
     <title>BankAccount</title>
 </head>
 <body>
@@ -16,17 +19,26 @@
                     <td>Name</td>
                     <td>Balance</td>
                     <td>Occupation</td>
+                    <td>Type</td>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var account in @Model)
                 {
-                    <tr>
-                        <td>@account.ID</td>
-                        <td>@account.Name</td>
-                        <td>@account.Balance.ToString("0.00") @account.Currency</td>
-                        <td>@account.Occupation</td>
-                    </tr>
+                <tr>
+                    <td>@(index++)</td>
+                    <td>@account.Name</td>
+                    <td>@account.Balance.ToString("0.00") @account.Currency</td>
+                    <td>@account.Occupation</td>
+                    @if (account.TypeOf == BankOfSimba.Models.BankAccount.Type.King)
+                    {
+                        <td class="shiny">@account.TypeOf</td>
+                    }
+                    else
+                    {
+                        <td>@account.TypeOf</td>
+                    }
+                </tr>
                 }
             </tbody>
         </table>

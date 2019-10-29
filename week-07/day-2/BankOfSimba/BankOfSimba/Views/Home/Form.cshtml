@@ -1,0 +1,33 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="~/Form.css" rel="stylesheet" />
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="/add" method="post">
+            <nav>
+                <h1>Create new Account</h1>
+            </nav>
+            <div class="inputs">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Name">
+            </div>
+            <div class="inputs">
+                <label for="balance">Balance</label>
+                <input type="number" name="balance" id="balance" required placeholder="balance">
+            </div>
+            <div class="inputs">
+                <label for="currency">Currency</label>
+                <div class="currency">
+                    <input type="radio" name="currency" id="curency" value="$" >$
+                    <input type="radio" name="currency" id="curency" value="CZK">CZK
+                </div>
+            </div>
+            <div class="inputs">
+                <label for="occupation">Occupation</label>
+                <input type="text" name="occupation" id="ocupation" required placeholder="Plumber, programmer...">
+            </div>
+            <button>Create</button>
+        </form>
+    </body>
+</html>

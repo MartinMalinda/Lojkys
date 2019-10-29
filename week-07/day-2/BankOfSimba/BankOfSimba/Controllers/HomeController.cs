@@ -9,6 +9,15 @@ namespace BankOfSimba.Controllers
 {
     public class HomeController : Controller
     {
+        static List<BankAccount> bankAccounts = new List<BankAccount>()
+            {
+                new BankAccount("Superman", 5000, "$", "Hero", BankAccount.Type.King),
+                new BankAccount("Joker", 3000, "$", "Bastard", BankAccount.Type.Loser),
+                new BankAccount("Rocky Balboa", 10000, "$", "Boxer", BankAccount.Type.King),
+                new BankAccount("Jaromir Jagr", 10, "$", "Hockey Player", BankAccount.Type.King),
+                new BankAccount("Milos Zeman", 0, "Idiot!!!", BankAccount.Type.Loser)
+            };
+
         [Route("")]
         public IActionResult Index()
         {
@@ -18,7 +27,7 @@ namespace BankOfSimba.Controllers
         [Route("show")]
         public IActionResult Show()
         {
-            BankAccount bankAccount = new BankAccount(1, "Simba", 2000, "Zebra", "lion");
+            BankAccount bankAccount = new BankAccount("Simba", 2000, "Zebra", "lion", BankAccount.Type.King);
 
             return View(bankAccount);
         }
@@ -32,16 +41,20 @@ namespace BankOfSimba.Controllers
         [Route("accounts")]
         public IActionResult Accounts()
         {
-            List<BankAccount> bankAccounts = new List<BankAccount>()
-            {
-                new BankAccount(1, "Superman", 5000, "$", "Hero"),
-                new BankAccount(2, "Joker", 3000, "$", "Bastard"),
-                new BankAccount(3, "Rocky Balboa", 10000, "$", "Boxer"),
-                new BankAccount(4, "Jaromir Jagr", 10, "$", "Hockey Player"),
-                new BankAccount(5, "Milos Zeman", 0, "$", "Idiot!!!")
-            };
-
             return View(bankAccounts);
+        }
+
+        [Route("add")]
+        public IActionResult Add(string name, double balance, string currency, string occupation)
+        {
+            bankAccounts.Add(new BankAccount(name, balance, currency, occupation, BankAccount.Type.Loser));
+            return RedirectToAction("accounts");
+        }
+
+        [Route("form")]
+        public IActionResult Form()
+        {
+            return View();
         }
     }
 }
