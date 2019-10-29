@@ -1,0 +1,9 @@
+﻿
+
+@{string a = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";}
+
+<h2>using @@HTML.Raw()</h2>
+@Html.Raw("This is an <em>HTML</em> text. <b>Enjoy yourself!</b>")<br />
+
+<h2>using just @@string</h2>
+@a

@@ -6,8 +6,25 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+    <main>
+        <h1>My Shop</h1><hr>
+        <nav>
+            <a href="https://localhost:44370/onlyavailable">ONLY AVAILABLE</a>
+            <a href="https://localhost:44370/cheapestfirst">CHEAPEST FIRST</a>
+            <a href="https://localhost:44370/containsnike">CONTAINS NIKE</a>
+            <a href="https://localhost:44370/averagestock">AVERAGE STOCK</a>
+            <a href="https://localhost:44370/mostexpensive">MOST EXPENSIVE AVAILABLE</a>
+        </nav>
+        <div class="button">
+            <div class="searchbar">
+                <label for="search">Search for:</label>
+                <input type="search" id="search" name="search" placeholder="...something like nike" />
+            </div>
+            <button>Search</button>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </main>    
 </body>
 </html>

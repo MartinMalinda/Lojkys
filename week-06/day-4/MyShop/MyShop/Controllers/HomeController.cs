@@ -51,8 +51,8 @@ namespace MyShop.Controllers
         [Route("averagestock")]
         public IActionResult AverageStock()
         {
-            ViewBag.Items = listItem.Select(l => l.Quantity).Average().ToString();
-            return View("Index");
+            ViewBag.Items = listItem.Select(l => l.Quantity).Average();
+            return View();
         }
 
         [Route("mostexpensive")]

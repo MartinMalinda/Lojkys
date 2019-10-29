@@ -1,0 +1,35 @@
+﻿@model List< BankOfSimba.Models.BankAccount>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/style.css" rel="stylesheet" />
+    <title>BankAccount</title>
+</head>
+<body>
+    <h2>Accounts</h2>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <td>Index</td>
+                    <td>Name</td>
+                    <td>Balance</td>
+                    <td>Occupation</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var account in @Model)
+                {
+                    <tr>
+                        <td>@account.ID</td>
+                        <td>@account.Name</td>
+                        <td>@account.Balance.ToString("0.00") @account.Currency</td>
+                        <td>@account.Occupation</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

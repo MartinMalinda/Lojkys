@@ -1,0 +1,32 @@
+﻿@model BankOfSimba.Models.BankAccount
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="~/style.css" rel="stylesheet"/>
+        <title>BankAccount</title>
+    </head>
+    <body>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Balance</td>
+                        <td>Currency</td>
+                        <td>Occupation</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Name</td>
+                        <td>@Model.Balance.ToString(".00")</td>
+                        <td>@Model.Currency</td>
+                        <td>@Model.Occupation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
+
